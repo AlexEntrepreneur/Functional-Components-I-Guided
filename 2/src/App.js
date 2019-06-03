@@ -1,22 +1,12 @@
 import React from 'react';
+import SectionSome from './components/SectionSome';
 
 function BasicButton(props) {
   return <button>{ props.text }</button>
-
 }
 
-function SectionSome() {
-  return (
-  <section>
-    <div>
-      <p><strong>Are you still there?</strong></p>
-    </div>
-  </section>
-  )
-}
-
-function GoogleIt() {
-  return <a href="https://www.google.com">Go to Google</a>
+function GoogleIt(props) {
+  return <a href="https://www.google.com">{ props.text }</a>
 }
 
 function App() {
@@ -24,8 +14,8 @@ function App() {
     <div className="App">
       <h1>HELLO</h1>
       <BasicButton text='Click Me!'/>
-      <SectionSome />
-      <GoogleIt />
+      <SectionSome custom="some generic text"/>
+      <GoogleIt text="Google"/>
     </div>
   );
 }
