@@ -1,3 +1,12 @@
 const myElement = React.createElement('h1', { className: 'heading' }, 'Lambda Is AWESOME!');
+const jayneSaysHi = React.createElement('h1', { className: 'heading' }, 'Hi Everyone');
+const petarsElement = React.createElement('button', { className: 'btn' }, 'click me!');
+const myReact = React.createElement('p', { className: 'react' }, 'React Is AWESOME!');
+const petarSElement = React.createElement('small', { className: 'small' }, 'nice!');
+const appContainer = React.createElement(
+    'div', 
+    { className: 'App' },
+    [jayneSaysHi, myElement, petarsElement, myReact]
+);
 
-ReactDOM.render(myElement, document.querySelector('#root'));
+ReactDOM.render(appContainer, document.querySelector('#root'));
